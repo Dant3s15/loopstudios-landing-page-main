@@ -151,40 +151,54 @@ header .hero h1 {
 }
 
 header #hamburger {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   cursor: pointer;
   position: absolute;
+  top: 26px;
   right: 26px;
+  height: 18px;
+  width: 26px;
 }
 
-header .closedhmb .line {
+header #hamburger .line {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 2px;
+  top: 13px;
+  background-color: white;
+}
+
+header #hamburger .line::before {
+  position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  top: -6px;
   content: "";
   width: 25px;
   height: 2px;
   background-color: white;
-  margin-bottom: 5px;
+  z-index: 2;
 }
 
-header .closedhmb :first-child {
-  margin-top: 5px;
-}
-
-header .closedhmb :first-child {
-  -webkit-transform-origin: left;
-          transform-origin: left;
-}
-
-header .openhmb .line {
+header #hamburger .line:after {
+  position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   content: "";
+  top: 6px;
   width: 25px;
   height: 2px;
   background-color: white;
-  margin-bottom: 5px;
-}
-
-header .openhmb :first-child {
-  margin-top: 5px;
+  z-index: 2;
 }
 
 main .image img {
