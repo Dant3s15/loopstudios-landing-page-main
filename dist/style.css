@@ -53,7 +53,7 @@ body img {
 }
 
 header {
-  background: url(/images/mobile/image-hero.jpg) no-repeat center;
+  background: url(images/mobile/image-hero.jpg) no-repeat center;
   position: relative;
   background-size: cover;
   width: 100%;
